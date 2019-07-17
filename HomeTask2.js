@@ -1,6 +1,5 @@
 window.onload = function () {
 
-
     //Constant news channel variable
     const constNewsChannel = ["Aaj Tak", "Star News", "BBC News", "CNN News", "Zee News", "Bloomberg", "Aljazeera", "Sony News", "CNBC", "TOI"];
 
