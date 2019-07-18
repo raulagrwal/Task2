@@ -112,7 +112,7 @@ window.onload = function () {
     }
 
     const categorySubscribe = document.createElement('div');
-    categorySubscribe.className = 'rightDiv';
+    categorySubscribe.className = 'category-subscribe';
     mainWrapper.appendChild(categorySubscribe);
 
     const ddCategory = document.createElement('div');
@@ -179,65 +179,4 @@ window.onload = function () {
     footerText.innerHTML = '&copy; NewsFeed 2019';
     footerPara.appendChild(footerText);
     mainWrapper.appendChild(footer);
-}
-
-function openCategory() {
-    const value = document.getElementById("selectCategory").value;
-    if (value == 0) {
-        showAllCategory();
-    }
-    else {
-        for (let i = 0; i < 10; i++) {
-            const title = document.getElementById("tittle" + i);
-            title.className = 'section';
-            if (value == i) {
-                title.style.display = "block";
-            }
-            else {
-                title.style.display = "none";
-            }
-        }
-    }
-}
-
-function showAllCategory(){
-    for (let i = 0; i < 10; i++) {
-        const tittle = document.getElementById("tittle" + i);
-            tittle.style.display = "block";
-            tittle.className = 'section';
-            //if second section add class line for line break
-        if (i != 0) {
-            tittle.className = 'section line';
-        }
-    }
-}
-
-function openPopUp(value) {
-    const text = "This is an additional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque odio tortor, vulputate at suscipit ac, hendrerit vitae lectus.";
-    document.getElementById("popupTextContent").innerHTML = document.getElementById("newsContent" + value).innerHTML + "<br/><br/>" + text;
-    document.getElementById("popupTitle").innerHTML = document.getElementById("newsName" + value).innerHTML;
-    document.getElementById("popupCategory").innerHTML = document.getElementById("postedCategory" + value).innerHTML;
-    const popup = document.getElementById("popupSection");
-    popup.style.display = "block";
-}
-
-function closePopUp() {
-    const popup = document.getElementById("popupSection");
-    popup.style.display = "none";
-}
-
-function validateEmail() {
-    const inputText = document.getElementById("email").value;
-    const regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if (inputText.match(regEx)) {
-        if (typeof(Storage) != "undefined") {
-            localStorage.setItem("EmailAddress", inputText);
-            alert('Email Address is locally stored - ' + localStorage.getItem("EmailAddress"));
-        } else {
-            document.getElementById("result").innerHTML = "Local Storage functionality is not supported";
-        }
-    }
-    else {
-        alert("Invalid Email address.");
-    }
 }
