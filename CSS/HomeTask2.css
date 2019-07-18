@@ -9,8 +9,9 @@
 .header {
     padding-left: 10px;
     background-color: #273852;
-    height: 60px;
+    height: 55px;
     font-family: Arial;
+    font-size: 15px;
 }
 .header p {
     padding-top: 15px;    
@@ -25,21 +26,14 @@
     color: #233954;
     font-family: Arial;
 }
-
-.main-wrapper {
-    width: 100%;
-    margin-top: 0px;
-}
-
 .content-section {
     float: left;
-    width: 65%;
     padding-left: 10px;
 }
 
 .rightDiv {
     float: right;
-    width: 34%;
+    width: 25%;
 }
 
 .footer {
@@ -66,7 +60,7 @@
 }
 
 .content-text {
-    width: 700px !important;
+    width: 520px !important;
     padding-left: 15px;
 }
 
@@ -175,4 +169,8 @@
         color: #000;
         text-decoration: none;
         cursor: pointer;
+    }
+    .popup-title{
+        font-weight: bold;
+        font-size: 20px;
     }

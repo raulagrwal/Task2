@@ -2,7 +2,7 @@ window.onload = function () {
 
     //Constant news channel variable
     const newsChannel = ["Aaj Tak", "Star News", "BBC News", "CNN News", "Zee News", "Bloomberg", "Aljazeera", "Sony News", "CNBC", "TOI"];
-    const innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque odio tortor, vulputate at suscipit ac, hendrerit vitae lectus. Duis convallis risus et nunc tincidunt, non ornare sem sagittis. Ut ut mollis lorem. Vestibulum ultrices eros id mattis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing eros id mattis bibendum ut mollis lorem.';
+    const innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque odio tortor, vulputate at suscipit ac, hendrerit vitae lectus. Duis convallis risus et nunc tincidunt, non ornare sem sagittis. Ut ut mollis lorem. Vestibulum ultrices eros id mattis bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing eros id mattis.';
     //Main Div formation
     const mainWrapper = document.createElement('div');
     mainWrapper.className = 'main-wrapper';
@@ -55,6 +55,7 @@ window.onload = function () {
 
     const popupTitle = document.createElement('p');
     popupTitle.id = 'popupTitle';
+    popupTitle.className = "popup-title";
     popupSection.appendChild(popupTitle);
 
     const popupCategory = document.createElement('p');
@@ -93,7 +94,7 @@ window.onload = function () {
         const category = document.createElement('p');
         category.className = 'category';
         category.id = 'postedCategory' + i;
-        category.textContent = 'Posted on 29 June, 2019 // Category: Category - ' + i;
+        category.textContent = 'Posted on 29 June, 2019 // Category: Category - ' + newsChannel[i];
         contentdiv.appendChild(category);
 
         const content = document.createElement('p');
@@ -177,6 +178,7 @@ window.onload = function () {
     const footerText = document.createElement('h6');
     footerText.innerHTML = '&copy; NewsFeed 2019';
     footerPara.appendChild(footerText);
+    mainWrapper.appendChild(footer);
 }
 
 function openCategory() {

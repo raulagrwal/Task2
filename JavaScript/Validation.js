@@ -4,12 +4,12 @@ function validateEmail() {
     if (inputText.match(regEx)) {
         if (typeof(Storage) != "undefined") {
             localStorage.setItem("EmailAddress", inputText);
-            alert('Email Address is locally stored - ' + localStorage.getItem("EmailAddress"));
+            alert('Email address is locally stored successfully- ' + localStorage.getItem("EmailAddress"));
         } else {
             document.getElementById("result").innerHTML = "Local Storage functionality is not supported";
         }
     }
     else {
-        alert("Invalid Email address.");
+        alert("Invalid email address.");
     }
 }
